@@ -2,15 +2,13 @@ import React from 'react';
 import { PageProps } from 'gatsby';
 
 import Title from '@/components/Title';
+import Button from '@/components/layout/Button';
 
 const Home: React.FC<PageProps> = () => (
   <main>
     <Title />
-    <p>A TypeScript starter for Gatsby. Great for advanced users.</p>
-    <p>
-      Follow me on Twitter (
-      <a href="https://twitter.com/jpedroschmitz">@jpedroschmitz</a>)
-    </p>
+    <p>My name is kayak and this is TypeScript, ooh I&apos;m a big girl now</p>
+    <Button>This is a button.</Button>
   </main>
 );
 
