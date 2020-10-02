@@ -1,5 +1,28 @@
 import React from 'react'
+import tw, { styled } from 'twin.macro'
 
-const Title: React.FC = () => <h1>{'<kayak/>'}</h1>
+interface TitleProps {
+  className?: string
+}
 
-export default Title
+const Bracket = styled.span`
+  ${tw`font-normal text-mediumorchid-900`}
+`
+
+const Title: React.FC = ({ className }: TitleProps) => (
+  <h1 className={className}>
+    <Bracket>{'<'}</Bracket>
+    kayak
+    <Bracket>{' />'}</Bracket>
+  </h1>
+)
+
+const StyledTitle = styled(Title)`
+  ${tw`text-4xl text-brand font-black text-center`}
+`
+
+Title.defaultProps = {
+  className: '',
+}
+
+export default StyledTitle
