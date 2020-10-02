@@ -1,11 +1,23 @@
-import React from 'react';
+import React from 'react'
+import tw, { styled } from 'twin.macro'
 
-type Props = {
-  children: JSX.Element;
-};
+interface ButtonProps {
+  children: JSX.Element
+  className?: string
+}
 
-const Button: React.FC = ({ children }: Props) => (
-  <button type="button">{children}</button>
-);
+const Button: React.FC = ({ children, className }: ButtonProps) => (
+  <button type='button' className={className}>
+    {children}
+  </button>
+)
 
-export default Button;
+const StyledButton = styled(Button)`
+  ${tw`uppercase`}
+`
+
+Button.defaultProps = {
+  className: '',
+}
+
+export default StyledButton

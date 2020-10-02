@@ -1,5 +1,5 @@
-import React from 'react';
+import React from 'react'
 
-const Title: React.FC = () => <h1>{'<kayak/>'}</h1>;
+const Title: React.FC = () => <h1>{'<kayak/>'}</h1>
 
-export default Title;
+export default Title
