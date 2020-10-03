@@ -1,6 +1,6 @@
 import React from 'react'
 import { PageProps } from 'gatsby'
-import Hero from '@/components/Hero/HeroContainer'
+import Hero from '@/components/Hero/HeroSection'
 import Work from '@/components/Work/WorkSection'
 import About from '@/components/About/AboutSection'
 import Navbar from '@/components/Navbar/Navbar'
