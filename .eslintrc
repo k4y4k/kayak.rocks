@@ -33,7 +33,8 @@
       }
     ],
     "semi": ["error", "never"],
-    "jsx-quotes": ["error", "prefer-single"]
+    "jsx-quotes": ["error", "prefer-single"],
+    "arrow-parens": ["error", "as-needed"]
   },
   "overrides": [
     {
