@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import 'twin.macro'
 import styledImport, { CSSProp, css as cssImport } from 'styled-components'
 

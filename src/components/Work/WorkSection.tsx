@@ -22,7 +22,7 @@ const WorkContainer: React.FC = () => (
       <Title />
       <ProjectContainer>
         {[1, 2, 3].map(el => (
-          <DummyProject />
+          <DummyProject key={el} />
         ))}
       </ProjectContainer>
     </Inner>
