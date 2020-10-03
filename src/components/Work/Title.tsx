@@ -5,8 +5,8 @@ interface TitleProps {
   className?: string
 }
 
-const Title: React.FC = ({ className }: TitleProps) => (
-  <h1 className={className}>Work Here</h1>
+const Title: React.FC<TitleProps> = ({ className }) => (
+  <h1 className={className}>Projects</h1>
 )
 
 const StyledTitle = styled(Title)`

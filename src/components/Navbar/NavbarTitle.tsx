@@ -6,14 +6,21 @@ interface NavbarTitleProps {
   className?: string
 }
 
+const Brackets = styled.span`
+  ${tw`font-normal`}
+`
+
 const NavbarTitle: React.FC<NavbarTitleProps> = ({ className }) => (
   <Link to='/' className={className}>
+    <Brackets>{'<'}</Brackets>
     kayak
+    <Brackets>{'/>'}</Brackets>
   </Link>
 )
 
 const StyledNavbarTitle = styled(NavbarTitle)`
-  ${tw`text-2xl`}
+  ${tw`text-2xl font-black`}
+  font-family: "Inconsolata", monospace;
 `
 
 export default StyledNavbarTitle
