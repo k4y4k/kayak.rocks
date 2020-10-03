@@ -1,4 +1,10 @@
 module.exports = {
+  siteMetadata: {
+    title: '<kayak />',
+    description: "I'm kayak and you aren't",
+    author: '@__kayak__',
+  },
+
   plugins: [
     'gatsby-plugin-styled-components',
     {
