@@ -7,8 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: "#8724E6"
-        ,
+        brand: "#8724E6",
         mediumorchid: {
           50: '#f8fafb',
           100: '#f4f6fa',
