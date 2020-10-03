@@ -10,8 +10,13 @@ const Outer = styled.section`
 `
 
 const Inner = styled.div`
-  max-width: 1200px;
   ${tw`w-full self-center`}
+  max-width: 1200px;
+`
+
+const Break = styled.hr`
+  ${tw`border m-6 mx-auto border-gray-500`}
+  width: 33%
 `
 
 const HeroContainer: React.FC = () => (
@@ -20,7 +25,7 @@ const HeroContainer: React.FC = () => (
       <Prologue />
       <Title />
       <Epilogue />
-      <br />
+      <Break />
       <Button>See work</Button>
     </Inner>
   </Outer>

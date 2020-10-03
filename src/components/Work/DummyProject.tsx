@@ -7,7 +7,8 @@ const Project = styled.article`
 `
 
 const Tag = styled.span`
-  ${tw`p-1 bg-hotpink-900 text-white m-1 text-sm`}
+  ${tw`p-1 bg-hotpink-900 text-white m-1 text-sm font-black`}
+  font-family: "Inconsolata", monospace;
 `
 
 const DummyProject: React.FC = () => (
