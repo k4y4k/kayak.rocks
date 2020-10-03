@@ -1,0 +1,11 @@
+language: node_js
+node: lts/*
+
+script:
+  - yarn tsc
+
+# build every branch
+branches:
+  only:
+  - gh-pages
+  - /.*/
