@@ -13,7 +13,7 @@ const Button: React.FC = ({ children, className }: ButtonProps) => (
 )
 
 const StyledButton = styled(Button)`
-  ${tw`uppercase`}
+  ${tw`uppercase m-2 px-4 py-1 bg-black text-white rounded-lg`}
 `
 
 Button.defaultProps = {
