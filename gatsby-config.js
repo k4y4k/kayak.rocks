@@ -15,5 +15,17 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: '<kayak/>',
+        short_name: 'kayak.rocks',
+        start_url: '/',
+        background_color: '#146b3e',
+        theme_color: '#8724e6',
+        display: 'standalone',
+        icon: 'src/img/icon.png',
+      },
+    },
   ],
 }
