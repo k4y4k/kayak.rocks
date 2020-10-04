@@ -1863,7 +1863,7 @@
     "@types/glob" "*"
     "@types/node" "*"
 
-"@types/styled-components@^5.1.3":
+"@types/styled-components@5.1.3":
   version "5.1.3"
   resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.3.tgz#6fab3d9c8f7d9a15cbb89d379d850c985002f363"
   integrity sha512-HGpirof3WOhiX17lb61Q/tpgqn48jxO8EfZkdJ8ueYqwLbK2AHQe/G08DasdA2IdKnmwOIP1s9X2bopxKXgjRw==
@@ -2767,7 +2767,7 @@ babel-plugin-root-import@6.5.0:
   dependencies:
     slash "^3.0.0"
 
-"babel-plugin-styled-components@>= 1", babel-plugin-styled-components@^1.11.1:
+babel-plugin-styled-components@1.11.1, "babel-plugin-styled-components@>= 1":
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.11.1.tgz#5296a9e557d736c3186be079fff27c6665d63d76"
   integrity sha512-YwrInHyKUk1PU3avIRdiLyCpM++18Rs1NgyMXEAQC33rIXs/vro0A+stf4sT0Gf22Got+xRWB8Cm0tw+qkRzBA==
@@ -6217,7 +6217,7 @@ gatsby-page-utils@^0.2.27:
     lodash "^4.17.20"
     micromatch "^4.0.2"
 
-gatsby-plugin-manifest@^2.4.33:
+gatsby-plugin-manifest@2.4.33:
   version "2.4.33"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.4.33.tgz#cc50a439164f45b45005c97fa48ac8475ab535fb"
   integrity sha512-s5+XgDFQBeOUXPgQbzvTJOsBxKYVPKh8uFzb9zawknnfqFZ31hjSWZfLb+arl1MIXS3P99ZTaHPGeB4FV4z9xA==
@@ -6241,7 +6241,7 @@ gatsby-plugin-page-creator@^2.3.28:
     graphql "^14.7.0"
     lodash "^4.17.20"
 
-gatsby-plugin-styled-components@^3.3.12:
+gatsby-plugin-styled-components@3.3.12:
   version "3.3.12"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.3.12.tgz#17ee3e6e3435094b25b25ae8681133093263df77"
   integrity sha512-2X3pV1f7WEpwc8+etqO4PRN9yTIeeOz6IlMohkXt6DozSdNaZLqLobV310fzHX+HyXHaBOvxeuhkxm+myc8dsA==
@@ -6261,7 +6261,7 @@ gatsby-plugin-typescript@^2.4.20:
     "@babel/runtime" "^7.11.2"
     babel-plugin-remove-graphql-queries "^2.9.20"
 
-gatsby-plugin-web-font-loader@^1.0.4:
+gatsby-plugin-web-font-loader@1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-web-font-loader/-/gatsby-plugin-web-font-loader-1.0.4.tgz#c50bdb0c1980110b3fd213a5be70feb2459514c3"
   integrity sha512-3c39bX9CcsYJQFhhmTyjuMJSqpld2rX+HsTOxP9k1PKFR4Rvo3lpzBW4d1tVpmUesR8BNL6u9eHT7/XksS1iog==
@@ -10601,7 +10601,7 @@ prompts@^2.3.2:
     kleur "^3.0.3"
     sisteransi "^1.0.4"
 
-prop-types@^15.5.10, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@15.7.2, prop-types@^15.5.10, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -10912,7 +10912,7 @@ react-focus-lock@^2.3.1:
     use-callback-ref "^1.2.1"
     use-sidecar "^1.0.1"
 
-react-helmet@^6.1.0:
+react-helmet@6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/react-helmet/-/react-helmet-6.1.0.tgz#a750d5165cb13cf213e44747502652e794468726"
   integrity sha512-4uMzEY9nlDlgxr61NL3XbKRy1hEkXmKNXhjbAIOVw5vcFrsdYbH2FEwcNyWvWinl103nXgzYNlns9ca+8kFiWw==
@@ -10936,7 +10936,7 @@ react-hot-loader@^4.12.21:
     shallowequal "^1.1.0"
     source-map "^0.7.3"
 
-react-icons@^3.0.1, react-icons@^3.11.0:
+react-icons@3.11.0, react-icons@^3.0.1:
   version "3.11.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.11.0.tgz#2ca2903dfab8268ca18ebd8cc2e879921ec3b254"
   integrity sha512-JRgiI/vdF6uyBgyZhVyYJUZAop95Sy4XDe/jmT3R/bKliFWpO/uZBwvSjWEdxwzec7SYbEPNPck0Kff2tUGM2Q==
@@ -12502,7 +12502,7 @@ style-to-object@^0.3.0:
   dependencies:
     inline-style-parser "0.1.1"
 
-styled-components@^5.2.0:
+styled-components@5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-5.2.0.tgz#6dcb5aa8a629c84b8d5ab34b7167e3e0c6f7ed74"
   integrity sha512-9qE8Vgp8C5cpGAIdFaQVAl89Zgx1TDM4Yf4tlHbO9cPijtpSXTMLHy9lmP0lb+yImhgPFb1AmZ1qMUubmg3HLg==
@@ -12618,7 +12618,7 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
-tailwindcss@^1.8.10, tailwindcss@^1.8.8:
+tailwindcss@1.8.10, tailwindcss@^1.8.8:
   version "1.8.10"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.8.10.tgz#945ef151c401c04a1c95e6a6bc747387a8d1b9dc"
   integrity sha512-7QkERG/cWCzsuMqHMwjOaLMVixOGLNBiXsrkssxlE1aWfkxVbGqiuMokR2162xRyaH2mBIHKxmlf1qb3DvIPqw==
@@ -12956,7 +12956,7 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-twin.macro@^1.10.0:
+twin.macro@1.10.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/twin.macro/-/twin.macro-1.10.0.tgz#b13d0934457d4cae54f1504a3a2ed744ed603960"
   integrity sha512-+K9xvBvlx7iQ+CRatqNO/3VVV2+D+rbxexViKFtkjlICd+7A9hp5/8IOQ3SUPTQp80Ouist3Zcs/89quSLaoZg==
