@@ -3,9 +3,9 @@ import tw, { styled } from 'twin.macro'
 import Title from '@/components/Navbar/NavbarTitle'
 import { RiLinkedinLine, RiGithubLine, RiTwitterLine } from 'react-icons/ri'
 
-interface NavbarProps {
-  className?: string
-}
+const Bar = styled.nav`
+  ${tw`bg-white text-gray-900 flex px-2 sticky top-0`}
+`
 
 const Left = styled.div`
   ${tw`flex-grow`}
@@ -18,13 +18,13 @@ const Right = styled.div`
     ${tw`list-none flex py-2`}
 
     li {
-      ${tw`mx-1 flex align-middle`}
+      ${tw`mx-1 px-1 flex align-middle hover:text-brand`}
     }
   }
 `
 
-const Navbar: React.FC<NavbarProps> = ({ className }) => (
-  <nav className={className}>
+const Navbar: React.FC = () => (
+  <Bar>
     <Left>
       <Title />
     </Left>
@@ -51,11 +51,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => (
         </li>
       </ul>
     </Right>
-  </nav>
+  </Bar>
 )
 
-const StyledNavbar = styled(Navbar)`
-  ${tw`bg-hotpink-200 text-hotpink-800 flex px-2 sticky top-0`}
-`
-
-export default StyledNavbar
+export default Navbar

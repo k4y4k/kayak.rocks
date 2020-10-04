@@ -7,7 +7,7 @@ interface NavbarTitleProps {
 }
 
 const Brackets = styled.span`
-  ${tw`font-normal`}
+  ${tw`font-normal text-mediumorchid-900`}
 `
 
 const NavbarTitle: React.FC<NavbarTitleProps> = ({ className }) => (
@@ -19,7 +19,7 @@ const NavbarTitle: React.FC<NavbarTitleProps> = ({ className }) => (
 )
 
 const StyledNavbarTitle = styled(NavbarTitle)`
-  ${tw`text-2xl font-black`}
+  ${tw`text-2xl font-black text-brand`}
   font-family: "Inconsolata", monospace;
 `
 
