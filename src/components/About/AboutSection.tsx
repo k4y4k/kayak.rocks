@@ -11,7 +11,7 @@ const Inner = styled.div`
 `
 
 const AboutSection: React.FC = () => (
-  <Outer>
+  <Outer id='about'>
     <Inner>
       <Title />
       <p>

@@ -2,6 +2,7 @@ import React from 'react'
 import tw, { styled } from 'twin.macro'
 import Title from '@/components/Navbar/NavbarTitle'
 import { RiLinkedinLine, RiGithubLine, RiTwitterLine } from 'react-icons/ri'
+import { Link } from 'gatsby'
 
 const Bar = styled.nav`
   ${tw`bg-white text-gray-900 flex px-2 sticky top-0`}
@@ -30,8 +31,12 @@ const Navbar: React.FC = () => (
     </Left>
     <Right>
       <ul>
-        <li>Work</li>
-        <li>About</li>
+        <li>
+          <Link to='#work'>Work</Link>
+        </li>
+        <li>
+          <Link to='#about'>About</Link>
+        </li>
 
         <li>
           <a href='https://twitter.com/__kayak__'>
