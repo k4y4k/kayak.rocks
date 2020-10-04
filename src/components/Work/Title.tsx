@@ -10,7 +10,7 @@ const Title: React.FC<TitleProps> = ({ className }) => (
 )
 
 const StyledTitle = styled(Title)`
-  ${tw`text-2xl`}
+  ${tw`text-2xl m-6`}
 `
 
 Title.defaultProps = {
