@@ -17,7 +17,7 @@ const ProjectContainer = styled.div`
 `
 
 const WorkContainer: React.FC = () => (
-  <Outer>
+  <Outer id='work'>
     <Inner>
       <Title />
       <ProjectContainer>
