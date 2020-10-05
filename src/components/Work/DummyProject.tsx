@@ -43,7 +43,7 @@ const Project: React.FC<ProjectProps> = ({ className }) => (
 )
 
 const StyledProject = styled(Project)`
-  ${tw`bg-dodgerblue-900 text-white flex`}
+  ${tw`bg-cornflowerblue-900 text-white flex`}
   ${({ crisscross }) => crisscross && tw`bg-pink-600 flex-row-reverse`}
   min-height: 75vh;
 `
