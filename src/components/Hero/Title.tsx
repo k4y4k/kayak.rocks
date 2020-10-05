@@ -5,21 +5,22 @@ interface TitleProps {
   className?: string
 }
 
-const Bracket = styled.span`
-  ${tw`font-normal text-mediumpurple-900`}
+const Monospace = styled.span`
+  ${tw`font-black text-mediumpurple-500 text-5xl`}
+  font-family: "Inconsolata", monospace;
 `
 
 const Title: React.FC<TitleProps> = ({ className }) => (
   <h1 className={className}>
-    <Bracket>{'<'}</Bracket>
-    kayak
-    <Bracket>{'/>'}</Bracket>
+    My name is <Monospace>kayak</Monospace>
+    <br /> and I <Monospace>make websites.</Monospace>
+    <br /> Simple as that.
   </h1>
 )
 
 const StyledTitle = styled(Title)`
-  ${tw`text-6xl text-brand font-black -mt-2`}
-  font-family: "Inconsolata", monospace;
+  ${tw`text-4xl text-left font-black -mt-2 col-start-2 row-start-2`}
+  line-height: 3rem;
 `
 
 export default StyledTitle
