@@ -10,6 +10,7 @@ import HC from '@/components/Work/HorizontalContainer'
 
 interface ProjectProps {
   className?: string
+  crisscross: boolean
 }
 
 const Project: React.FC<ProjectProps> = ({ className }) => (
@@ -43,6 +44,8 @@ const Project: React.FC<ProjectProps> = ({ className }) => (
 
 const StyledProject = styled(Project)`
   ${tw`bg-dodgerblue-900 text-white flex`}
+  ${({ crisscross }) => crisscross && tw`bg-pink-600 flex-row-reverse`}
+  min-height: 75vh;
 `
 
 export default StyledProject
