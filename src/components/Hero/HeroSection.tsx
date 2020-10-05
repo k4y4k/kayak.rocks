@@ -4,31 +4,22 @@ import Title from '@/components/Hero/Title'
 import Prologue from '@/components/Hero/Prologue'
 import Epilogue from '@/components/Hero/Epilogue'
 import Button from '@/components/layout/Button'
-
-const Outer = styled.section`
-  ${tw`flex align-middle justify-center h-screen text-center`}
-`
+import HeroImage from '@/components/Hero/HeroImage'
 
 const Inner = styled.div`
-  ${tw`w-full self-center`}
+  ${tw`w-full self-center p-2 py-4 border-brand border text-white`}
   max-width: 1200px;
 `
 
-const Break = styled.hr`
-  ${tw`border m-6 mx-auto border-gray-500`}
-  width: 33%
-`
-
 const HeroContainer: React.FC = () => (
-  <Outer>
+  <HeroImage>
     <Inner>
       <Prologue />
       <Title />
       <Epilogue />
-      <Break />
       <Button>See work</Button>
     </Inner>
-  </Outer>
+  </HeroImage>
 )
 
 export default HeroContainer
