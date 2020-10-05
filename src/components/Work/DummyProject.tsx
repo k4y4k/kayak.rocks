@@ -1,67 +1,48 @@
 import React from 'react'
 import tw, { styled } from 'twin.macro'
 import Button from '@/components/layout/Button'
+import Tag from '@/components/Work/Tag'
+import Image from '@/components/Work/Image'
+import DetailsContainer from '@/components/Work/DetailsContainer'
+import ProjectTitle from '@/components/Work/ProjectTitle'
+import Description from '@/components/Work/Description'
+import HC from '@/components/Work/HorizontalContainer'
 
-const Project = styled.article`
-  ${tw`bg-dodgerblue-900 text-white flex`}
-`
+interface ProjectProps {
+  className?: string
+}
 
-const ProjectImg = styled.div`
-  ${tw`bg-gray-500 flex-grow`}
-  width: calc(100vw * 0.6);
-  height: calc(100vh * 0.6);
-`
+const Project: React.FC<ProjectProps> = ({ className }) => (
+  <article className={className}>
+    <Image />
 
-const ProjectDetailsContainer = styled.div`
-  ${tw`flex flex-col p-4`}
-  max-width: 40vw;
-`
-
-const ProjectTitle = styled.h1`
-  ${tw`uppercase text-2xl font-black m-4`}
-  font-family: "Inconsolata", monospace
-`
-
-const ProjectDescription = styled.p`
-  ${tw`leading-loose m-4`}
-`
-
-const Tag = styled.span`
-  ${tw`p-1 bg-hotpink-900 text-white m-1 text-sm font-black`}
-  font-family: "Inconsolata", monospace;
-`
-
-const ButtonTagContainer = styled.div`
-  ${tw`flex m-2 align-middle justify-center`}
-`
-
-const DummyProject: React.FC = () => (
-  <Project>
-    <ProjectImg />
-
-    <ProjectDetailsContainer>
+    <DetailsContainer>
       <ProjectTitle>Dummy Project</ProjectTitle>
 
-      <ProjectDescription>
+      <Description>
         Aut autem molestiae dicta est qui culpa eos omnis. Cum rerum sunt
         exercitationem. Autem numquam est qui voluptatem a molestias sit et.
         Optio ullam a praesentium eos sed accusantium. Quo cumque eos aut error
         facere perspiciatis voluptas itaque. Voluptatem ex et molestiae aliquam.
-      </ProjectDescription>
+      </Description>
 
-      <ButtonTagContainer>
+      <HC>
         <Button>Read more</Button>
         <Button>Demo</Button>
         <Button>GitHub</Button>
-      </ButtonTagContainer>
+      </HC>
 
-      <ButtonTagContainer>
+      <HC>
         {['Gatsby', 'React', 'TypeScript'].map(tech => (
-          <Tag key={tech}>{tech}</Tag>
+          <Tag key={tech} tagText={tech} />
         ))}
-      </ButtonTagContainer>
-    </ProjectDetailsContainer>
-  </Project>
+      </HC>
+    </DetailsContainer>
+  </article>
 )
 
-export default DummyProject
+const StyledProject = styled(Project)`
+  ${tw`bg-dodgerblue-900 text-white flex`}
+`
+
+export default StyledProject
