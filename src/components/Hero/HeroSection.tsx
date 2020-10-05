@@ -4,6 +4,7 @@ import Title from '@/components/Hero/Title'
 import HeroImage from '@/components/Hero/HeroImage'
 import Hi from '@/components/Hero/Hi'
 import Button from '@/components/layout/Button'
+import { RiGithubLine } from 'react-icons/ri'
 
 const Inner = styled.div`
   ${tw`w-full self-center p-2 py-4 border-brand border text-white bg-cornflowerblue-900 bg-opacity-50 grid`}
@@ -13,7 +14,7 @@ const Inner = styled.div`
 `
 
 const Buttons = styled.div`
-  ${tw`self-end`}
+  ${tw`self-end flex align-middle justify-center`}
   grid-row-start: 3;
   grid-column-start: span 2;
 `
@@ -28,8 +29,11 @@ const HeroContainer: React.FC = () => (
         <Button large important>
           Projects
         </Button>
-        <Button large>GitHub</Button>
-        <Button large>LinkedIn</Button>
+        <Button large>
+          <a href='https://github.com/k4y4k'>
+            <RiGithubLine size={30} />
+          </a>
+        </Button>
       </Buttons>
     </Inner>
   </HeroImage>
