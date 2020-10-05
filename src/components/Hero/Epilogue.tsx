@@ -10,7 +10,7 @@ const Epilogue: React.FC<EpilogueProps> = ({ className }) => (
 )
 
 const StyledEpilogue = styled(Epilogue)`
-  ${tw`text-xl`}
+  ${tw`text-xl mb-6`}
 `
 
 export default StyledEpilogue
