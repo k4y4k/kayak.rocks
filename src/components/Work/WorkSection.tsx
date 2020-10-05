@@ -4,7 +4,7 @@ import Title from '@/components/Work/Title'
 import DummyProject from '@/components/Work/DummyProject'
 
 const Outer = styled.section`
-  ${tw`p-2 pt-64 justify-center align-middle text-center`}
+  ${tw`pt-64 justify-center align-middle text-center`}
   min-height: 100vh;
 `
 
