@@ -3,11 +3,11 @@ import tw, { styled } from 'twin.macro'
 import Title from '@/components/About/Title'
 
 const Outer = styled.section`
-  ${tw`bg-royalblue-700 h-screen text-white flex flex-col justify-center align-middle text-center`}
+  ${tw`bg-cornflowerblue-700 h-screen text-white flex flex-col justify-center align-middle text-center`}
 `
 
 const Inner = styled.div`
-  ${tw`bg-royalblue-900`}
+  ${tw`bg-cornflowerblue-900`}
 `
 
 const AboutSection: React.FC = () => (

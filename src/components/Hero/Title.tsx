@@ -6,7 +6,7 @@ interface TitleProps {
 }
 
 const Bracket = styled.span`
-  ${tw`font-normal text-mediumorchid-900`}
+  ${tw`font-normal text-mediumpurple-900`}
 `
 
 const Title: React.FC<TitleProps> = ({ className }) => (
