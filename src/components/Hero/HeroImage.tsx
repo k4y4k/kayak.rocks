@@ -23,7 +23,7 @@ const HeroImage: React.FC<HeroImageProps> = ({ className, children }) => {
 
   return (
     <BackgroundImage
-      tag='section'
+      Tag='section'
       className={className}
       fluid={data.file.childImageSharp.fluid}
       backgroundColor='#22222'
