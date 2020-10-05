@@ -60,12 +60,17 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
       <Right>
         <ul>
           <li>
-            <Link to='#work'>Work</Link>
+            <Link to='#work'>Projects</Link>
           </li>
           <li>
             <Link to='#about'>About</Link>
           </li>
 
+          <li>
+            <a href='https://github.com/k4y4k'>
+              <RiGithubLine size={20} />
+            </a>
+          </li>
           <li>
             <a href='https://twitter.com/__kayak__'>
               <RiTwitterLine size={20} />
@@ -74,12 +79,6 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
           <li>
             <a href='https://www.linkedin.com/in/k4y4k/'>
               <RiLinkedinLine size={20} />
-            </a>
-          </li>
-
-          <li>
-            <a href='https://github.com/k4y4k'>
-              <RiGithubLine size={20} />
             </a>
           </li>
         </ul>
