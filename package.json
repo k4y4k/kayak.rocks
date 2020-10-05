@@ -1,15 +1,10 @@
 {
-  "name": "gatsby-starter-ts",
-  "description": "A TypeScript starter for Gatsby that includes all you need to build amazing projects",
+  "name": "kayak.rocks",
+  "description": "Personal website",
   "version": "1.0.0",
   "private": true,
-  "author": "João Pedro Schmitz <oi@joaopedro.cc> (joaopedro.cc)",
+  "author": "kayak <kayak@kayak.rocks>",
   "license": "MIT",
-  "keywords": [
-    "gatsby",
-    "starter",
-    "typescript"
-  ],
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build",
@@ -17,7 +12,8 @@
     "clean": "gatsby clean",
     "type-check": "tsc",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
-    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write"
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
+    "t": "tsc"
   },
   "husky": {
     "hooks": {
@@ -27,10 +23,8 @@
     }
   },
   "lint-staged": {
-    "./src/**/*.{ts,js,jsx,tsx}": [
-      "yarn lint --fix",
-      "yarn format"
-    ]
+    "./src/**/*.{ts,js,jsx,tsx}": ["yarn lint --fix", "yarn format"],
+    "./src/**/*.{ts,tsx}": ["yarn t"]
   },
   "dependencies": {
     "@types/styled-components": "5.1.3",
