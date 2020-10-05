@@ -16,8 +16,8 @@ const WorkContainer: React.FC = () => (
   <Outer id='work'>
     <Inner>
       <Title />
-      {[1, 2, 3].map(project => (
-        <DummyProject key={project} />
+      {[1, 2, 3].map((project, i) => (
+        <DummyProject key={project} crisscross={i % 2 === 0} />
       ))}
     </Inner>
   </Outer>
