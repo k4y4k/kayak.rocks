@@ -25,9 +25,11 @@ const HeroContainer: React.FC = () => (
       <Title />
 
       <Buttons>
-        <Button important>Projects</Button>
-        <Button>GitHub</Button>
-        <Button>LinkedIn</Button>
+        <Button large important>
+          Projects
+        </Button>
+        <Button large>GitHub</Button>
+        <Button large>LinkedIn</Button>
       </Buttons>
     </Inner>
   </HeroImage>
