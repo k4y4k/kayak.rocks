@@ -11,7 +11,7 @@ const Brackets = styled.span`
 `
 
 const NavbarTitle: React.FC<NavbarTitleProps> = ({ className }) => (
-  <Link to='/' className={className}>
+  <Link to='#home' className={className}>
     <Brackets>{'<'}</Brackets>
     kayak
     <Brackets>{'/>'}</Brackets>

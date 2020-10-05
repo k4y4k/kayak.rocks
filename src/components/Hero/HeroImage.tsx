@@ -23,6 +23,7 @@ const HeroImage: React.FC<HeroImageProps> = ({ className, children }) => {
 
   return (
     <BackgroundImage
+      id='home'
       Tag='section'
       className={className}
       fluid={data.file.childImageSharp.fluid}
