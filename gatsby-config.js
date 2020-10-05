@@ -6,6 +6,13 @@ module.exports = {
   },
 
   plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'img',
+        path: `${__dirname}/src/img/`,
+      },
+    },
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-web-font-loader',
@@ -27,5 +34,7 @@ module.exports = {
         icon: 'src/img/icon.png',
       },
     },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
   ],
 }
