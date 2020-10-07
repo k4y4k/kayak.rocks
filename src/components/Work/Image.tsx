@@ -10,7 +10,7 @@ const Image: React.FC<ImageProps> = ({ className }) => (
 )
 
 const StyledImage = styled(Image)`
-  ${tw`bg-gray-500 flex-grow`}
+  ${tw`bg-lightslategray-900 flex-grow`}
   width: calc(100vw * 0.6);
 `
 

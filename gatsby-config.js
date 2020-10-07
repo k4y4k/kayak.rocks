@@ -20,7 +20,13 @@ module.exports = {
         path: `${__dirname}/src/projects/`,
       },
     },
-    'gatsby-transformer-remark',
+
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        excerpt_separator: '<!-- end -->',
+      },
+    },
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-web-font-loader',

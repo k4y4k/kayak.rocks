@@ -27,6 +27,16 @@ const WorkContainer: React.FC = () => {
         edges {
           node {
             id
+            name
+            childMarkdownRemark {
+              frontmatter {
+                title
+                date
+                demo
+                tags
+              }
+              excerpt(format: MARKDOWN)
+            }
           }
         }
       }
@@ -37,8 +47,16 @@ const WorkContainer: React.FC = () => {
     <Outer>
       <Anchor id='work' />
       <Inner>
-        {data.allFile.edges.map((node, i) => (
-          <ProjectListing crisscross={i % 2 === 0} key={node.id} />
+        {data.allFile.edges.map((project, i) => (
+          <ProjectListing
+            crisscross={i % 2 === 0}
+            key={project.id}
+            title={project.node.childMarkdownRemark.frontmatter.title}
+            excerpt={project.node.childMarkdownRemark.excerpt}
+            demo={project.node.childMarkdownRemark.frontmatter.demo || null}
+            github={project.node.childMarkdownRemark.frontmatter.github || null}
+            tags={project.node.childMarkdownRemark.frontmatter.tags}
+          />
         ))}
       </Inner>
     </Outer>
