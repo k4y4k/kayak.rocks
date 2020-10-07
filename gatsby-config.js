@@ -13,6 +13,14 @@ module.exports = {
         path: `${__dirname}/src/img/`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'md',
+        path: `${__dirname}/src/projects/`,
+      },
+    },
+    'gatsby-transformer-remark',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-web-font-loader',
