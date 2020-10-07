@@ -29,7 +29,7 @@ const Project: React.FC<ProjectProps> = ({
   tags,
 }) => (
   <article className={className}>
-    <Image />
+    <Image title={title} />
 
     <DetailsContainer>
       <ProjectTitle>{title}</ProjectTitle>
