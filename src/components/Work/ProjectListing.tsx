@@ -8,43 +8,56 @@ import ProjectTitle from '@/components/Work/ProjectTitle'
 import Description from '@/components/Work/Description'
 import HC from '@/components/Work/HorizontalContainer'
 
-interface ProjectProps {
+type ProjectProps = {
   className?: string
   crisscross: boolean
+  title: string
+  excerpt: string
+  // null is passed if there's no URL in the md frontmatter
+  demo: string | null
+  // same deal
+  github: string | null
+  tags: string[]
 }
 
-const Project: React.FC<ProjectProps> = ({ className }) => (
+const Project: React.FC<ProjectProps> = ({
+  className,
+  title,
+  excerpt,
+  demo,
+  github,
+  tags,
+}) => (
   <article className={className}>
     <Image />
 
     <DetailsContainer>
-      <ProjectTitle>Dummy Project</ProjectTitle>
+      <ProjectTitle>{title}</ProjectTitle>
 
-      <Description>
-        Aut autem molestiae dicta est qui culpa eos omnis. Cum rerum sunt
-        exercitationem. Autem numquam est qui voluptatem a molestias sit et.
-        Optio ullam a praesentium eos sed accusantium. Quo cumque eos aut error
-        facere perspiciatis voluptas itaque. Voluptatem ex et molestiae aliquam.
-      </Description>
+      <Description>{excerpt}</Description>
+
+      <HC>{tags && tags.map(tag => <Tag tagText={tag} />)}</HC>
 
       <HC>
-        <Button>Read more</Button>
-        <Button>Demo</Button>
-        <Button>GitHub</Button>
-      </HC>
+        {demo && (
+          <a href={demo}>
+            <Button>Demo</Button>
+          </a>
+        )}
 
-      <HC>
-        {['Gatsby', 'React', 'TypeScript'].map(tech => (
-          <Tag key={tech} tagText={tech} />
-        ))}
+        {github && (
+          <a href={github}>
+            <Button>GitHub</Button>
+          </a>
+        )}
       </HC>
     </DetailsContainer>
   </article>
 )
 
 const StyledProject = styled(Project)`
-  ${tw`bg-cornflowerblue-900 text-white flex`}
-  ${({ crisscross }) => crisscross && tw`bg-pink-600 flex-row-reverse`}
+  ${tw`text-white flex h-24 bg-gradient-to-b from-brand via-palevioletred-800 to-salmon-900`}
+  ${({ crisscross }) => crisscross && tw`flex-row-reverse bg-gradient-to-t`}
   min-height: 75vh;
 `
 

@@ -1,10 +1,12 @@
 ---
-title: "Sweet Pandas Eating Sweets"
-date: "2017-08-10"
+title: 'Animoo Grill'
+date: '11-9-2020'
+demo: 'https://animoogrill.com'
+tags: ['Gatsby', 'Stripe', 'React', 'styled-components', 'tailwindCSS']
 ---
 
-Pandas are really sweet.
+Stickers that are so awesome, your unmentionables will fly off if you buy some. No, really. We've made some uncomfortable apologies.
 
-Here's a video of a panda eating sweets.
+<!-- end -->
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>
+Yes, really.
