@@ -12,7 +12,7 @@ const DetailsContainer: React.FC<DetailsContainerProps> = ({
 
 const StyledDetailsContainer = styled(DetailsContainer)`
   ${tw`flex flex-col p-4`}
-  max-width: 40vw;
+  max-width: 33vw;
 `
 
 export default StyledDetailsContainer
