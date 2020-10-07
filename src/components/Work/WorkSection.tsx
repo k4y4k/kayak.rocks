@@ -1,6 +1,6 @@
 import React from 'react'
 import tw, { styled } from 'twin.macro'
-import DummyProject from '@/components/Work/DummyProject'
+import ProjectListing from '@/components/Work/ProjectListing'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const Outer = styled.section`
@@ -38,7 +38,7 @@ const WorkContainer: React.FC = () => {
       <Anchor id='work' />
       <Inner>
         {data.allFile.edges.map((node, i) => (
-          <DummyProject crisscross={i % 2 === 0} key={node.id} />
+          <ProjectListing crisscross={i % 2 === 0} key={node.id} />
         ))}
       </Inner>
     </Outer>
