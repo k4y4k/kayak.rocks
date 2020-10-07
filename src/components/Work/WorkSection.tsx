@@ -23,7 +23,7 @@ const Anchor = styled.div`
 const WorkContainer: React.FC = () => {
   const data = useStaticQuery(graphql`
     {
-      allFile(filter: { extension: { eq: "md" } }) {
+      projects: allFile(filter: { extension: { eq: "md" } }) {
         edges {
           node {
             id
@@ -47,7 +47,7 @@ const WorkContainer: React.FC = () => {
     <Outer>
       <Anchor id='work' />
       <Inner>
-        {data.allFile.edges.map((project, i) => (
+        {data.projects.edges.map((project, i) => (
           <ProjectListing
             crisscross={i % 2 === 0}
             key={project.id}
