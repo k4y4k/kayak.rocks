@@ -34,6 +34,7 @@ const WorkContainer: React.FC = () => {
                 date
                 demo
                 tags
+                goToButtonLabel
               }
               excerpt(format: MARKDOWN)
             }
@@ -56,6 +57,9 @@ const WorkContainer: React.FC = () => {
             demo={project.node.childMarkdownRemark.frontmatter.demo || null}
             github={project.node.childMarkdownRemark.frontmatter.github || null}
             tags={project.node.childMarkdownRemark.frontmatter.tags}
+            goToButtonLabel={
+              project.node.childMarkdownRemark.frontmatter.goToButtonLabel
+            }
           />
         ))}
       </Inner>

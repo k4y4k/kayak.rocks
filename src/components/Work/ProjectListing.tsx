@@ -18,6 +18,7 @@ type ProjectProps = {
   // same deal
   github: string | null
   tags: string[]
+  goToButtonLabel?: string
 }
 
 const Project: React.FC<ProjectProps> = ({
@@ -27,6 +28,7 @@ const Project: React.FC<ProjectProps> = ({
   demo,
   github,
   tags,
+  goToButtonLabel,
 }) => (
   <article className={className}>
     <Image title={title} />
@@ -41,7 +43,7 @@ const Project: React.FC<ProjectProps> = ({
       <HC>
         {demo && (
           <a href={demo}>
-            <Button>Demo</Button>
+            <Button>{goToButtonLabel || 'Demo'}</Button>
           </a>
         )}
 
