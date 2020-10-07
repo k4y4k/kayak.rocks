@@ -88,7 +88,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
 }
 
 const StyledNavbar = styled(Navbar)`
-  ${tw`text-white flex p-2 shadow`}
+  ${tw`text-white flex p-1 shadow`}
 `
 
 export default StyledNavbar

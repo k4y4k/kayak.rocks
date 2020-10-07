@@ -11,8 +11,17 @@ const Inner = styled.div`
   ${tw`w-full self-center`}
 `
 
+// compensate for header
+const Anchor = styled.div`
+  display: block;
+  position: relative;
+  top: -45px;
+  visibility: hidden;
+`
+
 const WorkContainer: React.FC = () => (
-  <Outer id='work'>
+  <Outer>
+    <Anchor id='work' />
     <Inner>
       {[1, 2, 3].map((project, i) => (
         <DummyProject key={project} crisscross={i % 2 === 0} />
