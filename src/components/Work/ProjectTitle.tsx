@@ -10,7 +10,7 @@ const ProjectTitle: React.FC<ProjectTitleProps> = ({ className, children }) => (
 )
 
 const StyledProjectTitle = styled(ProjectTitle)`
-  ${tw`uppercase text-2xl font-black m-4`}
+  ${tw`uppercase text-2xl font-black m-4 tracking-widest`}
   font-family: "Inconsolata", monospace
 `
 
