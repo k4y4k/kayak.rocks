@@ -1,12 +1,12 @@
-import React from 'react'
-import tw, { styled } from 'twin.macro'
 import {
-  SiTailwindcss,
   SiGatsby,
-  SiStripe,
   SiReact,
+  SiStripe,
   SiStyledComponents,
+  SiTailwindcss,
 } from 'react-icons/si'
+import tw, { styled } from 'twin.macro'
+import React from 'react'
 
 interface TagProps {
   className?: string

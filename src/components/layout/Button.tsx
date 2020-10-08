@@ -1,7 +1,7 @@
 /* eslint-disable implicit-arrow-linebreak */
 
-import React from 'react'
 import tw, { styled } from 'twin.macro'
+import React from 'react'
 
 interface ButtonProps {
   className?: string

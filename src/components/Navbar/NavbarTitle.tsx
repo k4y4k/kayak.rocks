@@ -1,6 +1,6 @@
-import React from 'react'
 import tw, { styled } from 'twin.macro'
 import { Link } from 'gatsby'
+import React from 'react'
 
 interface NavbarTitleProps {
   className?: string

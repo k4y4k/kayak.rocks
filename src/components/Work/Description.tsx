@@ -1,5 +1,5 @@
-import React from 'react'
 import tw, { styled } from 'twin.macro'
+import React from 'react'
 
 interface DescriptionProps {
   className?: string

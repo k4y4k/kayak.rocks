@@ -1,6 +1,6 @@
-import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 import tw, { styled } from 'twin.macro'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from 'react'
 
 const Outer = styled.section`
   ${tw`bg-gradient-to-t from-gray-900 via-cornflowerblue-900 to-chocolate-900 h-screen text-white flex flex-col justify-center align-middle text-center`}

@@ -1,7 +1,7 @@
-import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 import tw, { styled } from 'twin.macro'
 import BackgroundImage from 'gatsby-background-image'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from 'react'
 
 interface HeroImageProps {
   className?: string

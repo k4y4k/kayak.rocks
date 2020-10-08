@@ -1,11 +1,14 @@
-import React from 'react'
+/* eslint-disable sort-imports */
+/* I literally don't know why it's throwing an error */
+
 import tw, { styled } from 'twin.macro'
-import Title from '@/components/Hero/Title'
+import { Link } from 'gatsby'
+import { RiGithubLine } from 'react-icons/ri'
+import Button from '@/components/layout/Button'
 import HeroImage from '@/components/Hero/HeroImage'
 import Hi from '@/components/Hero/Hi'
-import Button from '@/components/layout/Button'
-import { RiGithubLine } from 'react-icons/ri'
-import { Link } from 'gatsby'
+import React from 'react'
+import Title from '@/components/Hero/Title'
 
 const Inner = styled.div`
   ${tw`w-full self-center p-2 py-4 border-brand border text-white bg-cornflowerblue-900 bg-opacity-50 grid`}

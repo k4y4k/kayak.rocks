@@ -1,14 +1,17 @@
-import React from 'react'
+/* eslint-disable sort-imports */
+/* they ARE sorted, smh */
+
 import tw, { styled } from 'twin.macro'
-import Title from '@/components/Navbar/NavbarTitle'
+import { useStaticQuery, Link, graphql } from 'gatsby'
 import {
-  RiLinkedinLine,
   RiGithubLine,
-  RiTwitterLine,
+  RiLinkedinLine,
   RiMailLine,
+  RiTwitterLine,
 } from 'react-icons/ri'
-import { Link, useStaticQuery, graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
+import React from 'react'
+import Title from '@/components/Navbar/NavbarTitle'
 
 interface NavbarProps {
   className?: string

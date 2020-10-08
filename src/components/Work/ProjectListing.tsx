@@ -1,12 +1,12 @@
-import React from 'react'
 import tw, { styled } from 'twin.macro'
 import Button from '@/components/layout/Button'
-import Tag from '@/components/Work/Tag'
-import Image from '@/components/Work/Image'
-import DetailsContainer from '@/components/Work/DetailsContainer'
-import ProjectTitle from '@/components/Work/ProjectTitle'
 import Description from '@/components/Work/Description'
+import DetailsContainer from '@/components/Work/DetailsContainer'
 import HC from '@/components/Work/HorizontalContainer'
+import Image from '@/components/Work/Image'
+import ProjectTitle from '@/components/Work/ProjectTitle'
+import React from 'react'
+import Tag from '@/components/Work/Tag'
 
 type ProjectProps = {
   className?: string
