@@ -23,7 +23,9 @@ const Anchor = styled.div`
 const WorkContainer: React.FC = () => {
   const data = useStaticQuery(graphql`
     {
-      projects: allFile(filter: { extension: { eq: "md" } }) {
+      projects: allFile(
+        filter: { extension: { eq: "md" }, sourceInstanceName: { eq: "md" } }
+      ) {
         edges {
           node {
             id
