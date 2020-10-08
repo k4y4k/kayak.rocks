@@ -3,6 +3,7 @@ import React from 'react'
 
 interface DetailsContainerProps {
   className?: string
+  crisscross: boolean
 }
 
 const DetailsContainer: React.FC<DetailsContainerProps> = ({
@@ -11,8 +12,11 @@ const DetailsContainer: React.FC<DetailsContainerProps> = ({
 }) => <div className={className}>{children}</div>
 
 const StyledDetailsContainer = styled(DetailsContainer)`
-  ${tw`flex flex-col p-4`}
+  ${tw`p-4 bg-gradient-to-b from-brand via-palevioletred-800 to-salmon-900`}
+  ${({ crisscross }) => crisscross && tw`bg-gradient-to-t`}
   max-width: 33vw;
+  min-height: 100%;
+  overflow: visible;
 `
 
 export default StyledDetailsContainer

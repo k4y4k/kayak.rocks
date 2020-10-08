@@ -3,7 +3,8 @@ import tw, { styled } from 'twin.macro'
 import React from 'react'
 
 const Outer = styled.section`
-  ${tw`bg-gradient-to-t from-gray-900 via-cornflowerblue-900 to-chocolate-900 h-screen text-white flex flex-col justify-center align-middle text-center`}
+  ${tw`bg-gradient-to-t from-gray-900 via-cornflowerblue-900 to-chocolate-900 p-8 text-white flex flex-col justify-center align-middle text-center `}
+  min-height:500px;
 `
 
 const Inner = styled.div`
@@ -43,13 +44,11 @@ const AboutSection: React.FC = () => {
 
   return (
     <Outer id='about'>
-      <Inner>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: aboutText.file.childMarkdownRemark.html,
-          }}
-        />
-      </Inner>
+      <Inner
+        dangerouslySetInnerHTML={{
+          __html: aboutText.file.childMarkdownRemark.html,
+        }}
+      />
     </Outer>
   )
 }
