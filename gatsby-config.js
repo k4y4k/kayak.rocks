@@ -20,7 +20,13 @@ module.exports = {
         path: `${__dirname}/src/projects/`,
       },
     },
-
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'sections',
+        path: `${__dirname}/src/sections`,
+      },
+    },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
