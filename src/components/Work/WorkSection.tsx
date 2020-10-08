@@ -1,7 +1,7 @@
-import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 import tw, { styled } from 'twin.macro'
 import ProjectListing from '@/components/Work/ProjectListing'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from 'react'
 
 const Outer = styled.section`
   ${tw`justify-center align-middle text-center`}

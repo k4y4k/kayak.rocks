@@ -1,11 +1,12 @@
-import React from 'react'
-import { PageProps } from 'gatsby'
-import Hero from '@/components/Hero/HeroSection'
-import Work from '@/components/Work/WorkSection'
+/* eslint-disable sort-imports */
+
 import About from '@/components/About/AboutSection'
+import Hero from '@/components/Hero/HeroSection'
 import Navbar from '@/components/Navbar/Navbar'
-// can't @-style import this one
-import SEO from '../seo'
+import React from 'react'
+import Work from '@/components/Work/WorkSection'
+import { PageProps } from 'gatsby'
+import SEO from '../seo' // can't @-style import this one
 
 const Home: React.FC<PageProps> = () => (
   <main>
