@@ -77,7 +77,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
             </a>
           </li>
           <li>
-            <a href='https://twitter.com/__kayak__'>
+            <a href='https://twitter.com/mynameis_kayak'>
               <RiTwitterLine size={20} />
             </a>
           </li>
