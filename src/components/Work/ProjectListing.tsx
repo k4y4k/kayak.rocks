@@ -29,11 +29,12 @@ const Project: React.FC<ProjectProps> = ({
   github,
   tags,
   goToButtonLabel,
+  crisscross,
 }) => (
   <article className={className}>
     <Image title={title} />
 
-    <DetailsContainer>
+    <DetailsContainer crisscross={crisscross}>
       <ProjectTitle>{title}</ProjectTitle>
 
       <Description>{excerpt}</Description>
@@ -58,9 +59,9 @@ const Project: React.FC<ProjectProps> = ({
 )
 
 const StyledProject = styled(Project)`
-  ${tw`text-white flex h-24 bg-gradient-to-b from-brand via-palevioletred-800 to-salmon-900`}
-  ${({ crisscross }) => crisscross && tw`flex-row-reverse bg-gradient-to-t`}
-  min-height: 75vh;
+  ${tw`text-white flex bg-transparent w-full`}
+  ${({ crisscross }) => crisscross && tw`flex-row-reverse`}
+  min-height: 500px;
 `
 
 export default StyledProject
