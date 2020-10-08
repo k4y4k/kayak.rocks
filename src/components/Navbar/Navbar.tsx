@@ -1,7 +1,12 @@
 import React from 'react'
 import tw, { styled } from 'twin.macro'
 import Title from '@/components/Navbar/NavbarTitle'
-import { RiLinkedinLine, RiGithubLine, RiTwitterLine } from 'react-icons/ri'
+import {
+  RiLinkedinLine,
+  RiGithubLine,
+  RiTwitterLine,
+  RiMailLine,
+} from 'react-icons/ri'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
@@ -79,6 +84,12 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
           <li>
             <a href='https://www.linkedin.com/in/k4y4k/'>
               <RiLinkedinLine size={20} />
+            </a>
+          </li>
+
+          <li>
+            <a href='mailto:kayak@alcamine.com'>
+              <RiMailLine size={20} />
             </a>
           </li>
         </ul>
