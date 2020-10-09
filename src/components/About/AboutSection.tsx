@@ -1,10 +1,30 @@
+/* eslint-disable implicit-arrow-linebreak,operator-linebreak */
+
 import { graphql, useStaticQuery } from 'gatsby'
-import tw, { styled } from 'twin.macro'
+import tw, { css, styled } from 'twin.macro'
 import React from 'react'
 
 const Outer = styled.section`
-  ${tw`bg-gradient-to-t from-gray-900 via-cornflowerblue-900 to-chocolate-900 p-8 text-white flex flex-col justify-center align-middle text-center `}
+  ${tw`p-8 py-24 text-white flex flex-col justify-center align-middle text-center`}
   min-height:500px;
+  background: rgb(87, 56, 103);
+  background: linear-gradient(
+    180deg,
+    rgb(87, 56, 103) 0%,
+    rgb(115, 44, 91) 50%,
+    rgb(106, 35, 46) 100%
+  );
+
+  ${({ projectsCount }) =>
+    projectsCount % 2 === 0 &&
+    css`
+      background: linear-gradient(
+        0deg,
+        rgb(87, 56, 103) 0%,
+        rgb(115, 44, 91) 50%,
+        rgb(106, 35, 46) 100%
+      );
+    `}
 `
 
 const Inner = styled.div`
@@ -32,21 +52,25 @@ const Inner = styled.div`
 `
 
 const AboutSection: React.FC = () => {
-  const aboutText = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     {
-      file(name: { eq: "about" }, extension: { eq: "md" }) {
+      aboutText: file(name: { eq: "about" }, extension: { eq: "md" }) {
         childMarkdownRemark {
           html
         }
+      }
+
+      projectsCount: allFile(filter: { sourceInstanceName: { eq: "md" } }) {
+        totalCount
       }
     }
   `)
 
   return (
-    <Outer id='about'>
+    <Outer id='about' projectsCount={data.projectsCount.totalCount}>
       <Inner
         dangerouslySetInnerHTML={{
-          __html: aboutText.file.childMarkdownRemark.html,
+          __html: data.aboutText.childMarkdownRemark.html,
         }}
       />
     </Outer>
