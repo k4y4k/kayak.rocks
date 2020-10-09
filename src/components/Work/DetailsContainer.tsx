@@ -14,9 +14,8 @@ const DetailsContainer: React.FC<DetailsContainerProps> = ({
 const StyledDetailsContainer = styled(DetailsContainer)`
   ${tw`p-4 bg-gradient-to-b from-brand via-palevioletred-800 to-salmon-900`}
   ${({ crisscross }) => crisscross && tw`bg-gradient-to-t`}
-  max-width: 33vw;
-  min-height: 100%;
-  overflow: visible;
+  background-color: #222;
+  grid-area: info;
 `
 
 export default StyledDetailsContainer
