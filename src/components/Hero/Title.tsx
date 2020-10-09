@@ -21,6 +21,11 @@ const Title: React.FC<TitleProps> = ({ className }) => (
 const StyledTitle = styled(Title)`
   ${tw`text-4xl text-left font-black -mt-2 col-start-2 row-start-2`}
   line-height: 3rem;
+
+  @media (max-width: 640px) {
+    grid-area: 2 / 1 / 3 / 3;
+    ${tw`m-2 mb-0 text-center`}
+  }
 `
 
 export default StyledTitle
