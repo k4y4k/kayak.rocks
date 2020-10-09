@@ -79,6 +79,7 @@ const StyledProject = styled(Project)`
     crisscross &&
     css`
       @media (min-width: 640px) {
+        grid-template-columns: 2fr 1fr;
         grid-template-areas:
           'image info'
           'image info';
