@@ -1,4 +1,6 @@
-import tw, { styled } from 'twin.macro'
+/* eslint-disable implicit-arrow-linebreak,operator-linebreak */
+
+import tw, { styled, css } from 'twin.macro'
 import React from 'react'
 
 interface DetailsContainerProps {
@@ -12,10 +14,29 @@ const DetailsContainer: React.FC<DetailsContainerProps> = ({
 }) => <div className={className}>{children}</div>
 
 const StyledDetailsContainer = styled(DetailsContainer)`
-  ${tw`p-4 bg-gradient-to-b from-brand via-palevioletred-800 to-salmon-900`}
-  ${({ crisscross }) => crisscross && tw`bg-gradient-to-t`}
+  ${tw`p-4`}
   background-color: #222;
   grid-area: info;
+
+  background: rgb(87, 56, 103);
+  background: linear-gradient(
+    180deg,
+    rgb(87, 56, 103) 0%,
+    rgb(115, 44, 91) 50%,
+    rgb(106, 35, 46) 100%
+  );
+
+  ${({ crisscross }) =>
+    crisscross &&
+    css`
+      background: rgb(87, 56, 103);
+      background: linear-gradient(
+        0deg,
+        rgb(87, 56, 103) 0%,
+        rgb(115, 44, 91) 50%,
+        rgb(106, 35, 46) 100%
+      );
+    `}
 `
 
 export default StyledDetailsContainer
