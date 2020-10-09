@@ -1,4 +1,6 @@
-import tw, { styled } from 'twin.macro'
+/* eslint-disable implicit-arrow-linebreak,operator-linebreak */
+
+import tw, { styled, css } from 'twin.macro'
 import Button from '@/components/layout/Button'
 import Description from '@/components/Work/Description'
 import DetailsContainer from '@/components/Work/DetailsContainer'
@@ -60,10 +62,9 @@ const Project: React.FC<ProjectProps> = ({
 
 const StyledProject = styled(Project)`
   ${tw`text-white bg-transparent w-full`}
-  ${({ crisscross }) => crisscross && tw` `}
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: repeat(2, minmax(250px, 1fr));
+  grid-template-rows: repeat(2, minmax(300px, 1fr));
   grid-template-areas:
     'info info'
     'image image';
@@ -73,6 +74,16 @@ const StyledProject = styled(Project)`
       'info image'
       'info image';
   }
+
+  ${({ crisscross }) =>
+    crisscross &&
+    css`
+      @media (min-width: 640px) {
+        grid-template-areas:
+          'image info'
+          'image info';
+      }
+    `}
 `
 
 export default StyledProject
