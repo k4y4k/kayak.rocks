@@ -32,8 +32,6 @@ const Project: React.FC<ProjectProps> = ({
   crisscross,
 }) => (
   <article className={className}>
-    <Image title={title} />
-
     <DetailsContainer crisscross={crisscross}>
       <ProjectTitle>{title}</ProjectTitle>
 
@@ -55,13 +53,26 @@ const Project: React.FC<ProjectProps> = ({
         )}
       </HC>
     </DetailsContainer>
+
+    <Image title={title} />
   </article>
 )
 
 const StyledProject = styled(Project)`
-  ${tw`text-white flex bg-transparent w-full`}
-  ${({ crisscross }) => crisscross && tw`flex-row-reverse`}
-  min-height: 500px;
+  ${tw`text-white bg-transparent w-full`}
+  ${({ crisscross }) => crisscross && tw` `}
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(2, minmax(250px, 1fr));
+  grid-template-areas:
+    'info info'
+    'image image';
+
+  @media (min-width: 640px) {
+    grid-template-areas:
+      'info image'
+      'info image';
+  }
 `
 
 export default StyledProject

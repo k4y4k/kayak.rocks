@@ -11,7 +11,7 @@ const HorizontalContainer: React.FC<HorizontalContainerProps> = ({
 }) => <div className={className}>{children}</div>
 
 const StyledHorizontalContainer = styled(HorizontalContainer)`
-  ${tw`flex flex-wrap m-2 align-middle justify-center`}
+  ${tw`flex flex-wrap align-middle justify-center`}
 `
 
 export default StyledHorizontalContainer
