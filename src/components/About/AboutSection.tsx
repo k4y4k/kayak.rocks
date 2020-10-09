@@ -4,6 +4,10 @@ import { graphql, useStaticQuery } from 'gatsby'
 import tw, { css, styled } from 'twin.macro'
 import React from 'react'
 
+type OuterProps = {
+  projectsCount?: number
+}
+
 const Outer = styled.section`
   ${tw`p-8 py-24 text-white flex flex-col justify-center align-middle text-center`}
   min-height:500px;
@@ -15,7 +19,7 @@ const Outer = styled.section`
     rgb(106, 35, 46) 100%
   );
 
-  ${({ projectsCount }) =>
+  ${({ projectsCount }: OuterProps) =>
     projectsCount % 2 === 0 &&
     css`
       background: linear-gradient(
