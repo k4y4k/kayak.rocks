@@ -53,7 +53,6 @@ const Image: React.FC<ImageProps> = ({ className, title }) => {
 
 const StyledImage = styled(Image)`
   ${tw`bg-lightslategray-900`}
-  min-width: calc(100vw * 0.6);
   grid-area: image;
 `
 
