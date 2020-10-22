@@ -10,6 +10,10 @@ branches:
   only:
     - gh-pages
     - /.*/
+  except:
+    - staging.tmp
+    - trying.tmp
+    - staging-squash-merge.tmp
 
 # only deploy prod to Pages
 deploy:
