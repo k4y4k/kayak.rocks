@@ -29,7 +29,7 @@
     ]
   },
   "dependencies": {
-    "@emotion/core": "10.0.35",
+    "@emotion/core": "10.1.1",
     "@emotion/styled": "10.0.27",
     "@types/styled-components": "5.1.4",
     "babel-plugin-styled-components": "1.11.1",
