@@ -50,7 +50,7 @@ steps:
       password: x-oauth-basic
     when:
       branch:
-        - dev
+        - prod
       event:
         exclude:
           - pull-request
