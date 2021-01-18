@@ -11,6 +11,9 @@ steps:
     image: meltwater/drone-cache:dev
     pull: true
     settings:
+      pull: true
+      restore: true
+      debug: true
       backend: 'filesystem'
       restore: true
       cache_key: '{{ .Repo.Name }}_{{ checksum "go.mod" }}_{{ checksum "go.sum" }}_{{ arch }}_{{ os }}'
@@ -58,6 +61,9 @@ steps:
     image: meltwater/drone-cache:dev
     pull: true
     settings:
+      pull: true
+      rebuild: true
+      debug: true
       backend: 'filesystem'
       cache_key: '{{ .Repo.Name }}_{{ checksum "go.mod" }}_{{ checksum "go.sum" }}_{{ arch }}_{{ os }}'
       archive_format: 'gzip'

@@ -1,0 +1,34 @@
+language: node_js
+node: lts/*
+
+script:
+  - yarn tsc
+  - yarn build
+
+# run script on every branch
+branches:
+  only:
+    - gh-pages
+    - /.*/
+
+# only deploy prod to Pages
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep_history: false
+  github_token: $GITHUB_TOKEN
+  fqdn: kayak.rocks
+  verbose: true
+  local_dir: public
+  on:
+    branch: prod
+
+after_success:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh success $WEBHOOK_URL
+
+after_failure:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh failure $WEBHOOK_URL
