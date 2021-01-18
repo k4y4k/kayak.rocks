@@ -1,0 +1,19 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+clone:
+  depth: 2
+
+steps:
+  - name: install
+    image: node:14
+    pull: if-not-exists
+    commands:
+      - yarn
+
+  - name: build
+    image: node:14
+    commands:
+      - yarn run build
