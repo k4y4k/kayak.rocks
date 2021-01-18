@@ -13,7 +13,28 @@ steps:
     commands:
       - yarn
 
+  - name: prebuild
+    image: node:14
+    commands:
+      - yarn lint
+      - yarn t
+
   - name: build
     image: node:14
     commands:
-      - yarn run build
+      - yarn build
+
+  - name: publish-site
+    failure: ignore
+    image: plugins/gh-pages
+    settings:
+      pages_directory: public/
+      username:
+        from_secret: github_token
+      password: x-oauth-basic
+    when:
+      branch:
+        - main
+      event:
+        exclude:
+          - pull-request
