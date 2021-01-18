@@ -13,7 +13,7 @@ steps:
     settings:
       backend: 'filesystem'
       restore: true
-      cache_key: 'volume'
+      cache_key: '{{ .Repo.Name }}_{{ checksum "go.mod" }}_{{ checksum "go.sum" }}_{{ arch }}_{{ os }}'
       archive_format: 'gzip'
       # filesystem_cache_root: "/tmp/cache"
       mount:
@@ -59,8 +59,7 @@ steps:
     pull: true
     settings:
       backend: 'filesystem'
-      rebuild: true
-      cache_key: 'volume'
+      cache_key: '{{ .Repo.Name }}_{{ checksum "go.mod" }}_{{ checksum "go.sum" }}_{{ arch }}_{{ os }}'
       archive_format: 'gzip'
       # filesystem_cache_root: "/tmp/cache"
       mount:
