@@ -7,6 +7,16 @@ clone:
   depth: 2
 
 steps:
+  - name: restore-cache
+    image: drillster/drone-volume-cache
+    restore: true
+    mount:
+      - ./node_modules
+    volumes:
+      - /tmp/cache:/cache
+    # Cache items older than 3 days get norted
+    ttl: 3
+
   - name: install
     image: node:14
     pull: if-not-exists
@@ -38,3 +48,11 @@ steps:
       event:
         exclude:
           - pull-request
+
+  - name: rebuild-cache
+    image: drillster/drone-volume-cache
+    rebuild: true
+    mount:
+      - ./node_modules
+    volumes:
+      - /tmp/cache:/cache
