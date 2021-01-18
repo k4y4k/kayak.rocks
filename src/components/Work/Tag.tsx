@@ -53,7 +53,7 @@ const Tag: React.FC<TagProps> = ({ className, tagText }) => {
 }
 
 const StyledTag = styled(Tag)`
-  ${tw`p-1 px-2 bg-black text-white m-1 text-sm tracking-widest whitespace-no-wrap`}
+  ${tw`p-1 px-2 bg-black text-white m-1 text-sm tracking-widest whitespace-nowrap`}
   font-family: "Inconsolata", monospace;
 
   span {
