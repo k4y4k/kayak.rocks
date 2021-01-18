@@ -7,20 +7,15 @@ clone:
   depth: 2
 
 steps:
-  - name: restore-cache-with-filesystem
-    image: meltwater/drone-cache:dev
-    pull: true
-    settings:
-      backend: 'filesystem'
-      restore: true
-      cache_key: '{{ .Repo.Name }}_{{ checksum "go.mod" }}_{{ checksum "go.sum" }}_{{ arch }}_{{ os }}'
-      archive_format: 'gzip'
-      # filesystem_cache_root: "/tmp/cache"
-      mount:
-        - 'node_modules'
+  - name: restore-cache
+    image: drillster/drone-volume-cache
     volumes:
       - name: cache
-        path: /tmp/cache
+        path: /cache
+    settings:
+      restore: true
+      mount:
+        - ./node_modules
 
   - name: install
     image: node:14
@@ -54,20 +49,17 @@ steps:
         exclude:
           - pull-request
 
-  - name: rebuild-cache-with-filesystem
-    image: meltwater/drone-cache:dev
-    pull: true
-    settings:
-      backend: 'filesystem'
-      cache_key: '{{ .Repo.Name }}_{{ checksum "go.mod" }}_{{ checksum "go.sum" }}_{{ arch }}_{{ os }}'
-      archive_format: 'gzip'
-      # filesystem_cache_root: "/tmp/cache"
-      mount:
-        - 'node_modules'
+  - name: rebuild-cache
+    image: drillster/drone-volume-cache
     volumes:
       - name: cache
-        path: /tmp/cache
+        path: /cache
+    settings:
+      rebuild: true
+      mount:
+        - ./node_modules
 
 volumes:
   - name: cache
-    temp: {}
+    host:
+      path: /tmp/cache
