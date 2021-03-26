@@ -10,4 +10,4 @@ My love for learning also translates into a fondness for <span>teaching.</span> 
 
 When I'm not busy with client projects, I spend my time reading, and when I'm not doing that, I enjoy writing, drawing, and cooking. Currently, I'm looking for full-time employment.
 
-You can reach me on [LinkedIn](https://www.linkedin.com/in/k4y4k/) and [via email](mailto:kayak@alcamine.com).
+You can reach me on [LinkedIn](https://www.linkedin.com/in/k4y4k/) and [via email](mailto:kayak@kayak.rocks).

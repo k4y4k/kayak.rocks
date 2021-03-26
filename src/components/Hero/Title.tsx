@@ -5,27 +5,21 @@ interface TitleProps {
   className?: string
 }
 
-const Monospace = styled.span`
-  ${tw`font-black text-mediumpurple-500 text-5xl`}
+const Small = styled.span`
+  ${tw`text-2xl md:text-3xl `}
   font-family: "Inconsolata", monospace;
 `
 
-const Title: React.FC<TitleProps> = ({ className }) => (
+const Title = ({ className }: TitleProps): JSX.Element => (
   <h1 className={className}>
-    My name is <Monospace>kayak</Monospace>
-    <br /> and I <Monospace>make websites.</Monospace>
-    <br /> Simple as that.
+    My name is kayak and I make websites.
+    <br />
+    <Small>Simple as that.</Small>
   </h1>
 )
 
 const StyledTitle = styled(Title)`
-  ${tw`text-4xl text-left font-black -mt-2 col-start-2 row-start-2`}
-  line-height: 3rem;
-
-  @media (max-width: 640px) {
-    grid-area: 2 / 1 / 3 / 3;
-    ${tw`m-2 mb-0 text-center`}
-  }
+  ${tw`font-mono text-3xl md:text-4xl`}
 `
 
 export default StyledTitle

@@ -3,12 +3,7 @@
 
 import tw, { styled } from 'twin.macro'
 import { useStaticQuery, Link, graphql } from 'gatsby'
-import {
-  RiGithubLine,
-  RiLinkedinLine,
-  RiMailLine,
-  RiTwitterLine,
-} from 'react-icons/ri'
+import { RiGithubLine, RiLinkedinLine, RiTwitterLine } from 'react-icons/ri'
 import BackgroundImage from 'gatsby-background-image'
 import React from 'react'
 import Title from '@/components/Navbar/NavbarTitle'
@@ -18,17 +13,17 @@ interface NavbarProps {
 }
 
 const Left = styled.div`
-  ${tw`flex-grow flex`}
+  ${tw`flex flex-grow`}
 `
 
 const Right = styled.div`
   ${tw`list-none`}
 
   ul {
-    ${tw`list-none flex`}
+    ${tw`flex list-none`}
 
     li {
-      ${tw`mx-1 px-2 py-1 flex align-middle hover:bg-black rounded-lg uppercase border border-transparent hover:border-brand hover:text-mediumpurple-500`}
+      ${tw`flex px-2 py-1 mx-1 uppercase align-middle border border-transparent rounded-lg hover:bg-black hover:border-brand hover:text-mediumpurple-500`}
 
       a svg {
         ${tw`align-middle `}
@@ -89,12 +84,6 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
               <RiLinkedinLine size={20} />
             </a>
           </li>
-
-          <li>
-            <a href='mailto:kayak@alcamine.com'>
-              <RiMailLine size={20} />
-            </a>
-          </li>
         </ul>
       </Right>
     </BackgroundImage>
@@ -102,7 +91,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
 }
 
 const StyledNavbar = styled(Navbar)`
-  ${tw`text-white flex p-1 shadow z-40`}
+  ${tw`z-40 flex p-1 text-white shadow`}
 `
 
 export default StyledNavbar
