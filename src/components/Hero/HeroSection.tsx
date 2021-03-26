@@ -11,29 +11,34 @@ import React from 'react'
 import Title from '@/components/Hero/Title'
 
 const Inner = styled.div`
-  ${tw`w-full self-center p-2 py-4 border-brand border text-white bg-cornflowerblue-900 bg-opacity-50 grid`}
+  ${tw`self-center w-full p-8 py-4 m-8 text-center text-white bg-black border border-brand`}
   max-width: 900px;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 0.5fr 1fr 0.5fr;
 `
 
 const Buttons = styled.div`
-  ${tw`self-end flex align-middle justify-center`}
+  ${tw`flex self-end justify-center align-middle`}
   grid-row-start: 3;
   grid-column-start: span 2;
 `
 
-const HeroContainer: React.FC = () => (
+const Divider = styled.hr`
+  ${tw`w-1/2 mx-auto my-6`}
+`
+
+const HeroContainer = (): JSX.Element => (
   <HeroImage>
     <Inner>
       <Hi />
       <Title />
 
+      <Divider />
+
       <Buttons>
         <Button large important>
           <Link to='#work'>Projects</Link>
         </Button>
-        <Button large>
+
+        <Button large important>
           <a href='https://github.com/k4y4k'>
             <RiGithubLine size={30} />
           </a>

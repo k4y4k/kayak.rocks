@@ -9,7 +9,7 @@ type OuterProps = {
 }
 
 const Outer = styled.section`
-  ${tw`p-8 py-24 text-white flex flex-col justify-center align-middle text-center`}
+  ${tw`flex flex-col justify-center p-8 py-24 text-center text-white align-middle`}
   min-height:500px;
   background: rgb(87, 56, 103);
   background: linear-gradient(
@@ -32,12 +32,12 @@ const Outer = styled.section`
 `
 
 const Inner = styled.div`
-  ${tw`mx-auto py-4 px-8 bg-mediumpurple-900 rounded-lg shadow-lg`}
+  ${tw`px-8 py-4 mx-auto bg-black rounded-lg shadow-lg`}
   max-width: 900px;
   line-height: 2;
 
   h1 {
-    ${tw`text-2xl uppercase font-black m-4 tracking-widest`};
+    ${tw`m-4 text-2xl font-black tracking-widest uppercase`};
     font-family: 'Inconsolata', monospace;
   }
 
@@ -45,11 +45,11 @@ const Inner = styled.div`
     ${tw`mb-4`}
 
     a {
-      ${tw`bg-black p-2 py-1 hover:text-mediumpurple-500`}
+      ${tw`p-2 py-1 bg-black hover:text-white text-mediumpurple-500`}
     }
 
     span {
-      ${tw`text-tomato-500 text-lg`}
+      ${tw`text-lg text-tomato-500`}
       font-family: "Inconsolata", monospace;
     }
   }

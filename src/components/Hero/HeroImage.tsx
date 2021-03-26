@@ -5,9 +5,10 @@ import React from 'react'
 
 interface HeroImageProps {
   className?: string
+  children: React.ReactNode
 }
 
-const HeroImage: React.FC<HeroImageProps> = ({ className, children }) => {
+const HeroImage = ({ className, children }: HeroImageProps): JSX.Element => {
   const data = useStaticQuery(graphql`
     {
       file(extension: { eq: "jpg" }, name: { eq: "hero" }) {
@@ -35,7 +36,7 @@ const HeroImage: React.FC<HeroImageProps> = ({ className, children }) => {
 }
 
 const StyledHeroImage = styled(HeroImage)`
-  ${tw`flex align-middle justify-center h-screen text-center`}
+  ${tw`flex justify-center h-screen text-center align-middle`}
 `
 
 export default StyledHeroImage

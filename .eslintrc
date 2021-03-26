@@ -35,7 +35,8 @@
     "semi": ["error", "never"],
     "jsx-quotes": ["error", "prefer-single"],
     "arrow-parens": ["error", "as-needed"],
-    "sort-imports": ["error",{ "ignoreMemberSort": true }]
+    "sort-imports": ["error", { "ignoreMemberSort": true }],
+    "react/require-default-props": "off"
   },
   "overrides": [
     {
