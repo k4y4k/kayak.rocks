@@ -34,7 +34,7 @@
     "@types/styled-components": "5.1.9",
     "babel-plugin-styled-components": "1.12.0",
     "gatsby": "3.3.0",
-    "gatsby-background-image": "1.5.0",
+    "gatsby-background-image": "1.5.1",
     "gatsby-image": "3.3.0",
     "gatsby-plugin-manifest": "3.3.0",
     "gatsby-plugin-offline": "4.3.0",
