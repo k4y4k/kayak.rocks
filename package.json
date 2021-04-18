@@ -54,8 +54,8 @@
     "twin.macro": "2.3.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "11.0.0",
-    "@commitlint/config-conventional": "11.0.0",
+    "@commitlint/cli": "12.1.1",
+    "@commitlint/config-conventional": "12.1.1",
     "@types/node": "14.14.41",
     "@types/react": "17.0.3",
     "@types/react-dom": "17.0.3",
