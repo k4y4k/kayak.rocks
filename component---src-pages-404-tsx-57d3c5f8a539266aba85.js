@@ -1,2 +1,0 @@
-(self.webpackChunkkayak_rocks=self.webpackChunkkayak_rocks||[]).push([[218],{938:function(e,n,a){"use strict";a.r(n);var r=a(7294);n.default=function(){return r.createElement("main",null,r.createElement("p",null,"Sorry, page not found!"))}}}]);
-//# sourceMappingURL=component---src-pages-404-tsx-57d3c5f8a539266aba85.js.map
