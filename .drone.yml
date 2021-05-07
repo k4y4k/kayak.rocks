@@ -24,19 +24,19 @@ steps:
         - ./node_modules
 
   - name: install
-    image: node:14
+    image: node:16
     pull: if-not-exists
     commands:
       - yarn
 
   - name: prebuild
-    image: node:14
+    image: node:16
     commands:
       - yarn lint
       - yarn t
 
   - name: build
-    image: node:14
+    image: node:16
     commands:
       - yarn build
 
