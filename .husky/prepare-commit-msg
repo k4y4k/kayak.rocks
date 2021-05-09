@@ -1,6 +1,4 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-# redir to /dev/null because cz vomits screenfuls of help text on every install
-npx --no-install commitizen > /dev/null
-exec < /dev/tty && yarn cz --hook || true
+# gitmoji as a commit hook
+exec < /dev/tty
+gitmoji --hook $1 $2
