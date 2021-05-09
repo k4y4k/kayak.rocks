@@ -12,14 +12,8 @@
     "clean": "gatsby clean",
     "lint": "yarn eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
     "format": "yarn prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
-    "t": "tsc"
-  },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "t": "tsc",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "./src/**/*.{ts,js,jsx,tsx}": [
@@ -73,7 +67,7 @@
     "eslint-plugin-prettier": "3.4.0",
     "eslint-plugin-react": "7.23.2",
     "eslint-plugin-react-hooks": "4.2.0",
-    "husky": "6.0.0",
+    "husky": "^6.0.0",
     "lint-staged": "10.5.4",
     "prettier": "2.2.1",
     "tailwindcss": "2.1.2",
