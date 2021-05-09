@@ -3,7 +3,26 @@
   "semanticCommits": "enabled",
   "stabilityDays": 3,
   "prCreation": "not-pending",
-  "labels": ["type: dependencies"],
   "dependencyDashboard": true,
-  "dependencyDashboardAutoclose": true
+  "dependencyDashboardAutoclose": true,
+  "dependencyDashboardFooter": "imagine being actually *called* kayak lmao",
+  "labels": ["dependencies"],
+  "prHourlyLimit": 3,
+  "rebaseLabel": "please-rebase",
+  "commitBodyTable": true,
+  "commitMessagePrefix": "⬆️",
+  "commitMessageAction": "Update",
+  "major": { "automerge": false },
+  "packageRules": [
+    {
+      "matchUpdateTypes": "pin",
+      "commitMessagePrefix": "📌",
+      "commitMessageAction": "Pin"
+    },
+    {
+      "matchUpdateTypes": "rollback",
+      "commitMessagePrefix": "⬇️",
+      "commitMessageAction": "Downgrade"
+    }
+  ]
 }
